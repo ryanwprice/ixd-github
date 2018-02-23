@@ -80,19 +80,53 @@ If you do encounter a conflict, try [GitHub Help](https://help.github.com/articl
 
 **Protip:** Always `git pull` before editing group code. That way you'll be sure to have the latest and greatest version of the group project. This will also drastically reduce the odds of merge conflicts!
 
-### Forking & Pulling
+## Forking & Pulling
 
 "Fork" is GitHub lingo for getting a copy of an existing repo. This is a way for people to share access with strangers who may want to contribute to a large project (like Linux, for example). "Pulling" allows the original author to control who's code updates will be brought into the fold and added to the project. 
 
 Forking is way more complicated than anything we need for group projects, but worth noting as something to explore down the road.
 
-### Branching
+## Branching
 
 Branching is a way to work on a project without affecting the regular [flow](https://guides.github.com/introduction/flow/) of the project. You are _branching_ off from the main project and your commits do not affect the master version of the repository.
 
-### GitHub Pages & Markdown
+- When you create a new Git repo, you begin on the `Master` branch
+- `git status` confirms this for us
+- add a new branch: `git branch branchName`
+- switch to new branch `git checkout branchName`
+- Protip: DO both steps at once `git checkout -b branchName`
+- confirm which branch we are on: `git branch` or `git status`
+- To merge, we need to be on the branch receiving the the commits from the other branch `git checkout master`
+- merge: `git merge branchName`
+- After you have successfully merged the branch into the Master, you should delete it: `git branch -d branchName`
+	- If you are giving up on the branch and don't want to merge it: `git branch -D branchName` to force the delete
+**Protip:** Never work directly in the master branch of a repo. The master should be for production code only.
 
-Markdown is, for our purposes, a simplified way to write HTML. It was designed to be an "easy-to-read and easy-to-write" syntax. It can be converted easily to HTML, Word Docs, ePubs, and many other file formats. A great Markdown writer is [iA Writer](https://ia.net/writer/), though Brackets (and many other editors) provides syntax highlighting for Markdown. It is easy to learn as the [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) reflects HTML hierarchy structures.
+**Protip:** Working on the wrong branch? `git stash` to toss all your changes into memory. Switch over to the correct branch and `git stash apply` to move your edits over to the right place
+
+## Mistakes
+
+### Conflicts
+
+- Git will flag a merge conflict
+- It will show the differences in the file (i.e. index.html)
+- the "HEAD" is the master branch/main repo
+- Fix the conflict in the file by deleting the wrong/outdated code and save.
+- You will need to add the file again `git add file path/filename.html` and commit the changes `git commit -m"Fixed merge conflict`
+
+### Resets
+
+`git reset --hard HEAD` will force a reset to the last commit
+`git reset --hard HEAD~3` will force the repo back 3 commits
+`git reset --hard 39cdcd0339c122c0307930de9e5cc08217726cee` will let us to revert to a specific repo (We can find the log checksum with `git log`)
+
+Reverting is non-destructive. The reset command will create a new commit in the log showing which commit was reverted.
+
+## GitHub Pages & Markdown
+
+Markdown is, for our purposes, a simplified way to write HTML. It was designed to be an "easy-to-read and easy-to-write" syntax. It can be converted easily to HTML, Word Docs, ePubs, and many other file formats. A great Markdown writer is [iA Writer](https://ia.net/writer/), though Brackets (and many other editors) provides syntax highlighting for Markdown. It is easy to learn as the [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) reflects HTML hierarchy structures. Markdown is also used for project ReadMe files.
 
 [GitHub Pages](https://pages.github.com/) is a way to share documentation and projects as Web sites directly through GitHub. Any static site (HTML, CSS, JS) can be hosted through GitHub Pages, and there is a template engine to make sites & blogs easier to maintain and produce called [Jekyll](https://jekyllrb.com/). Jekyll is a static site generator. It takes a template directory and Markdown files to create a complete, ready-to-publish static website. It is maintained by GitHub and integrates easily. [MkDocs](http://www.mkdocs.org/) is another static site generator, designed specifically to presenting project documentation. It is ridiculously simple to get running, but out of the box it isn't as customizable as Jekyll.
+
+**Fun Fact:** Did you know that Sheridan has its own [Git server](http://bender.sheridanc.on.ca/)? 
 

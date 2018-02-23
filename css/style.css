@@ -1,7 +1,7 @@
 body{
     margin:2em;
     padding:0;
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #ffffff 58%,#491448 58%); 
     font-family: Gotham, Helvetica, sans-serif;
 }
