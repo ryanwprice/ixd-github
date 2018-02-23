@@ -58,11 +58,11 @@ _If you didn't already, signup for [GitHub](https://github.com/join) and then ap
 
 1. Create a new repo on GitHub and follow the instructions they give you. They should look something like this:
     
-    `git init
+    git init
     git add README.md
     git commit -m "first commit"
     git remote add origin https://github.com/username/repo-name.git
-    git push -u origin master`
+    git push -u origin master
     
 The last step is `git push -u origin master`: 
 - origin is the name of the "remote" for your repository. When you link your repo to GitHub, you have a local copy on your computer, and a remote copy on GitHub.
