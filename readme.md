@@ -88,25 +88,28 @@ Forking is way more complicated than anything we need for group projects, but wo
 
 ## Branching
 
-Branching is a way to work on a project without affecting the regular [flow](https://guides.github.com/introduction/flow/) of the project. You are _branching_ off from the main project and your commits do not affect the master version of the repository.
+Branching is a way to work on a project without affecting the regular [flow](https://guides.github.com/introduction/flow/) of the project—you are _branching_ off from the main project and your commits do not affect the master version of the repository.
 
-- When you create a new Git repo, you begin on the `Master` branch
-- `git status` confirms this for us
-- add a new branch: `git branch branchName`
-- switch to new branch `git checkout branchName`
-- Protip: DO both steps at once `git checkout -b branchName`
-- confirm which branch we are on: `git branch` or `git status`
-- To merge, we need to be on the branch receiving the the commits from the other branch `git checkout master`
-- merge: `git merge branchName`
-- After you have successfully merged the branch into the Master, you should delete it: `git branch -d branchName`
-	- If you are giving up on the branch and don't want to merge it: `git branch -D branchName` to force the delete
+When you create a new Git repo, you begin on the `Master` branch ()`git status` confirms this for us).
+
+To add a new branch: `git branch branchName`
+Once you've created your new branch, you need to switch to that branch `git checkout branchName`
+
+**Protip:** DO both steps at once `git checkout -b branchName`
+
+Before making any edits, you can confirm which branch you are on: `git branch` or `git status`
+
+Once your code is ready to be applied to the main repository (Master) you will need to merge it. You need to switch to the branch receiving the commits from the other branch `git checkout master` and merge: `git merge branchName`
+
+After you have successfully merged the branch into the Master, you should delete it: `git branch -d branchName`. If you are giving up on the branch and don't want to merge it: `git branch -D branchName` to force the delete
+
 **Protip:** Never work directly in the master branch of a repo. The master should be for production code only.
 
 **Protip:** Working on the wrong branch? `git stash` to toss all your changes into memory. Switch over to the correct branch and `git stash apply` to move your edits over to the right place
 
 ## Mistakes
 
-## Conflicts
+### Conflicts
 
 - Git will flag a merge conflict
 - It will show the differences in the file (i.e. index.html)
