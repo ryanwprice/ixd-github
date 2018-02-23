@@ -1,0 +1,39 @@
+body{
+    margin:2em;
+    padding:0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff 58%,#491448 58%); 
+    font-family: Gotham, Helvetica, sans-serif;
+}
+
+p, a{
+    color: #92278F;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: #491448;
+    font-size: 4rem;
+}
+
+ul{
+    padding:0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom:1em;
+    font-size: 2rem;
+    padding:0;
+}
+
+li a:hover {
+    border-bottom: .1em dotted #491448;
+}
+
+li a:visited{
+    color: #E9D4E9;
+}
