@@ -32,7 +32,7 @@ When everything goes wrong with the current version of files, git allows you to 
 
 ## Using Git
 
-1. `cd` to the Desktop (`cd ~/Desktop` or try typing `cd ` and dragging the folder from Finder into the Terminal 
+1. `cd` to the Desktop (`cd ~/Desktop` or try typing `cd ` and dragging the folder from Finder into the Terminal)
 2. Create a new folder for your first git project: `mkdir -p git-project /{css,img,js}`
 3. Add build a home page, css, & js file: `touch index.html css/style.css js/script.js`
 4. Connect git to the folder: `git init`
@@ -41,10 +41,10 @@ When everything goes wrong with the current version of files, git allows you to 
     - We could also add single files. Example: `git add filename.html`
 7. Git is ready and waiting, but we need to commit our files to the first version in the repo: `git commit -m "initial commit"`
 8. Let's see how we're doing by checking `git status` again
-9. Macs love to dadd `.DS_Store` files so lets make sure git doesn't waste time saving them by creating an ignore list: `touch .gitignore` Note: Make sure you are in the root!
+9. Macs love to dadd `.DS_Store` files so lets make sure git doesn't waste time saving them by creating an ignore list: `touch .gitignore` _Note: Make sure you are in the root!_
 10. Open `.gitignore` and list files & folders to ignore, one per line. Add `.DS_Store`
 
-Note: If you forget to add new files, rather than creating another commit, you can `git add` and `git commit --amend` to sneak them into the last commit
+_Note: If you forget to add new files, rather than creating another commit, you can `git add` and `git commit --amend` to sneak them into the last commit_
 
 ### Extra Git Commands
 
@@ -54,13 +54,21 @@ Note: If you forget to add new files, rather than creating another commit, you c
 
 ## Adding in GitHub
 
-- Create a new repo on GH
-- Follow the instructions
-- `git push -u origin master` (origin is the name of the remote for GH)
-- `-u` links the local and remote branches so you don't have to type out the Long form each time
-- git push for all other changes
+_If you didn't already, signup for [GitHub](https://github.com/join) and then apply for a [GitHub Education discount](https://education.github.com/discount_requests/new)_
 
-# Working in groups
+1. Create a new repo on GitHub and follow the instructions they give you. They should look something like this:
+    
+    `git init
+    git add README.md
+    git commit -m "first commit"
+    git remote add origin https://github.com/username/repo-name.git
+    git push -u origin master`
+    
+The last step is `git push -u origin master`: 
+- origin is the name of the "remote" for your repository. When you link your repo to GitHub, you have a local copy on your computer, and a remote copy on GitHub.
+- `-u` links the local and remote copies so you don't have to type out the long form each time. From now on, `git push` is all you need to type to get your last commit copied to GitHub.
+
+## Working on Group Projects
 
 - Add collaborators
 - Collabs can push & pull to GH repo
