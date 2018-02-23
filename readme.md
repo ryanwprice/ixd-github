@@ -2,7 +2,7 @@
 
 ## About Git (not GitHub)
 
-- Git is a "Distributed version control system", which means that every user has their own, complete, copy of the repository stored on their computer. A repository is like a database with a record of every change _ever_ made.
+Git is a "Distributed version control system", which means that every user has their own, complete, copy of the repository stored on their computer. A repository is like a database with a record of every change _ever_ made.
 
 Git was originally created by Linus Torvalds, the same guy that created Linux, which is (probably) why it is free and opensource. 
 - 
@@ -32,22 +32,25 @@ When everything goes wrong with the current version of files, git allows you to 
 
 ## Using Git
 
-- cd to the Desktop (show GUI shortcut)
-- make a root folder, 
-`mkdir -p root folder/{css,img,js}
-- touch index.html css/style.css js/script.js
-- git init
-- git status
-- git add . **empty folder are ignored**
-- git commit -m "initial commit"
-- git status
-- touch .gitignore (in the root) and list files & folders to ignore, one per line Add .DS_Store )
+1. `cd` to the Desktop (`cd ~/Desktop` or try typing `cd ` and dragging the folder from Finder into the Terminal 
+2. Create a new folder for your first git project: `mkdir -p git-project /{css,img,js}`
+3. Add build a home page, css, & js file: `touch index.html css/style.css js/script.js`
+4. Connect git to the folder: `git init`
+5. Check to see what the status of your repository is: `git status`
+6. Add your files to the repo: `git add .` Note: empty folders, such as the `img` folder are ignored
+    - We could also add single files. Example: `git add filename.html`
+7. Git is ready and waiting, but we need to commit our files to the first version in the repo: `git commit -m "initial commit"`
+8. Let's see how we're doing by checking `git status` again
+9. Macs love to dadd `.DS_Store` files so lets make sure git doesn't waste time saving them by creating an ignore list: `touch .gitignore` Note: Make sure you are in the root!
+10. Open `.gitignore` and list files & folders to ignore, one per line. Add `.DS_Store`
 
-*if you forget to add new files, you can `git add` and `git commit --amend`
+Note: If you forget to add new files, rather than creating another commit, you can `git add` and `git commit --amend` to sneak them into the last commit
+
+### Extra Git Commands
 
 - `git log` shows you the commit history
-- `git stat` gives more details
-- `git log -p -2` displays differences for the last 2 commits
+- `git stat` gives more details on that history
+- `git log -p -2` displays differences for the last 2 commits (feel free to change the number)
 
 ## Adding in GitHub
 
