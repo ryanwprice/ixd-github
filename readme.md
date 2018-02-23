@@ -1,45 +1,34 @@
 # IXD students learn GitHub
 
-## Resources
+## About Git (not GitHub)
 
-Version Control with Git https://gumroad.com/l/rXch
-http://ohshitgit.com/
-Request a discount https://education.github.com/discount_requests/new
-Github Hello World https://guides.github.com/activities/hello-world/
-https://services.github.com/on-demand/downloads/github-git-cheat-sheet.pdf
-https://try.github.io
+- Git is a "Distributed version control system", which means that every user has their own, complete, copy of the repository stored on their computer. A repository is like a database with a record of every change _ever_ made.
 
-https://gist.github.com/ryanwprice/1e4c2dc7ffe8ac5041a9aa3e1b243ce9
+Git was originally created by Linus Torvalds, the same guy that created Linux, which is (probably) why it is free and opensource. 
+- 
+Git is fast because most of the work is done locally rather than on a server. Best of all, it can be worked on offline! 
 
-## About
+Because files are versioned, you can't overwrite any file.
 
-- Git is a "Distributed version control system" = every user has a complete copy of the repo on their computer
-- originally created by Linus Torvalds 
-- a repo is like a database with a record of every change ever made
-- Most of the work is done locally, instead of on a server, so it is fast (and can be worked on offline)
-- Everything is checksummed (like a unique barcode)
-- Free and opensource
-- Files cannot be overwritten
-- There is a common repository that holds all the latest files
-- People can work on the same files simultaneously without conflict
-- Allows you to revert back to an older version of the file/project if needed
+Git is great for groups and teams because people can work on the same files simultaneously without conflict (due to the local repo).
 
-## Terminal basics
+When everything goes wrong with the current version of files, git allows you to revert back to an older version of the file/project whenver things hit the fan!
 
-cd
-Pwd
-Ls
-Ls -a shows hidden files
-Sudo (superuser)
+## Terminal Basics
 
-## Getting setup
+`cd` = change directory    
+`pwd` = print working directory     
+`ls` = list files     
+`ls -a` = shows hidden files     
+`sudo` = superuser (prefix commands that need admin control)
 
--signup for GitHub https://education.github.com/discount_requests/new
+## Getting Setup
 
-- `git --version` (installs git)
-- git config --global user.name "Your name"
-- git config --global user.email "ryan@ryanprice.net"
-- git config --list
+1. Signup for [GitHub](https://github.com/join) and then apply for a [GitHub Education discount](https://education.github.com/discount_requests/new)
+2. From your Mac terminal, type `git --version` to install git
+3. Set your Name `git config --global user.name "Your name"`
+4. Set your email `git config --global user.email "you@email.com"`
+5. Check to make sure you got things correct: `git config --list`
 
 ## Using Git
 
