@@ -68,22 +68,31 @@ The last step is `git push -u origin master`:
 - origin is the name of the "remote" for your repository. When you link your repo to GitHub, you have a local copy on your computer, and a remote copy on GitHub.
 - `-u` links the local and remote copies so you don't have to type out the long form each time. From now on, `git push` is all you need to type to get your last commit copied to GitHub.
 
+**Protip:** You can cache your password using the osxkeychain credential helper. [GitHub Help](https://help.github.com/articles/updating-credentials-from-the-osx-keychain/) contains instructions on how to take care of this.
+
 ## Working on Group Projects
 
-- Add collaborators
-- Collabs can push & pull to GH repo
+Working with your peers on group projects is super easy to setup: Once one of you has built a repo on GitHub, you can go to `Settings > Collaborators` and add the usernames of each member of the group. Once they connect to the repo, everyone can `push` and `pull` files to the same repository.
 
-### Fork & Pull
-- Collaborators don't have to fork & pull on Public repos 
-- Fork = get a copy of a repo
-- Pull = original author can review changes made in forked copy before combining it into the original repo
-- git pull
+Watch out for merge conflicts. If you commit an update that has code that directly conflicts with someone else's commit, you will get a "merge conflict". These can be tricky to sort out at times, but as long as everyone is working on their own area of code, it shouldn't be a problem. 
 
-Note: You can cache your password using the osxkeychain credential helper. GitHub help contains instructions on how to install it
-# Branching
+If you do encounter a conflict, try [GitHub Help](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/) for some tips on getting outta hot water!
 
-# Mentions
+**Protip:** Always `git pull` before editing group code. That way you'll be sure to have the latest and greatest version of the group project. This will also drastically reduce the odds of merge conflicts!
 
-- GitHub pages
-- markdown
+### Forking & Pulling
+
+"Fork" is GitHub lingo for getting a copy of an existing repo. This is a way for people to share access with strangers who may want to contribute to a large project (like Linux, for example). "Pulling" allows the original author to control who's code updates will be brought into the fold and added to the project. 
+
+Forking is way more complicated than anything we need for group projects, but worth noting as something to explore down the road.
+
+### Branching
+
+Branching is a way to work on a project without affecting the regular [flow](https://guides.github.com/introduction/flow/) of the project. You are _branching_ off from the main project and your commits do not affect the master version of the repository.
+
+### GitHub Pages & Markdown
+
+Markdown is, for our purposes, a simplified way to write HTML. It was designed to be an "easy-to-read and easy-to-write" syntax. It can be converted easily to HTML, Word Docs, ePubs, and many other file formats. A great Markdown writer is [iA Writer](https://ia.net/writer/), though Brackets (and many other editors) provides syntax highlighting for Markdown. It is easy to learn as the [Markdown syntax](https://daringfireball.net/projects/markdown/syntax) reflects HTML hierarchy structures.
+
+[GitHub Pages](https://pages.github.com/) is a way to share documentation and projects as Web sites directly through GitHub. Any static site (HTML, CSS, JS) can be hosted through GitHub Pages, and there is a template engine to make sites & blogs easier to maintain and produce called [Jekyll](https://jekyllrb.com/). Jekyll is a static site generator. It takes a template directory and Markdown files to create a complete, ready-to-publish static website. It is maintained by GitHub and integrates easily. [MkDocs](http://www.mkdocs.org/) is another static site generator, designed specifically to presenting project documentation. It is ridiculously simple to get running, but out of the box it isn't as customizable as Jekyll.
 
