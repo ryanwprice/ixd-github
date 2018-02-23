@@ -95,7 +95,7 @@ When you create a new Git repo, you begin on the `Master` branch ()`git status` 
 To add a new branch: `git branch branchName`
 Once you've created your new branch, you need to switch to that branch `git checkout branchName`
 
-**Protip:** DO both steps at once `git checkout -b branchName`
+**Protip:** Do both steps at once `git checkout -b branchName`
 
 Before making any edits, you can confirm which branch you are on: `git branch` or `git status`
 
@@ -109,21 +109,25 @@ After you have successfully merged the branch into the Master, you should delete
 
 ## Mistakes
 
+Mistakes happen. Fix 'em!
+
 ### Conflicts
 
-- Git will flag a merge conflict
-- It will show the differences in the file (i.e. index.html)
-- the "HEAD" is the master branch/main repo
-- Fix the conflict in the file by deleting the wrong/outdated code and save.
-- You will need to add the file again `git add file path/filename.html` and commit the changes `git commit -m"Fixed merge conflict`
+If you are working on code with others, when you try to commit or merge a branch, you may run into a conflict with the code (when you and someone else have made changes to the same lines of code)
+
+Git will flag the conflict and show the differences in the file (i.e. index.html). The "HEAD" is the main/current code that is in conflict with yours.
+
+You an fix the conflict in the file by deleting the wrong/outdated code and hitting save. After, you will need to add the file again `git add file path/filename.html` and commit the changes `git commit -m"Fixed merge conflict"`
 
 ### Resets
+
+`git revert 39cdcd0339c122c0307930de9e5cc08217726cee` will let us to revert to a specific repo (We can find the log checksum with `git log`). Reverting is non-destructive. All your commits remain intact, but git creates a new commit which is identical to the one you chose to revert to.
+
+The reset command is destructive and removes any commits between your current commit and the one you choose to reset to.
 
 `git reset --hard HEAD` will force a reset to the last commit
 `git reset --hard HEAD~3` will force the repo back 3 commits
 `git reset --hard 39cdcd0339c122c0307930de9e5cc08217726cee` will let us to revert to a specific repo (We can find the log checksum with `git log`)
-
-Reverting is non-destructive. The reset command will create a new commit in the log showing which commit was reverted.
 
 ## GitHub Pages & Markdown
 
