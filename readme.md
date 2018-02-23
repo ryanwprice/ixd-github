@@ -106,7 +106,7 @@ Branching is a way to work on a project without affecting the regular [flow](htt
 
 ## Mistakes
 
-### Conflicts
+## Conflicts
 
 - Git will flag a merge conflict
 - It will show the differences in the file (i.e. index.html)
