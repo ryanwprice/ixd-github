@@ -5,7 +5,7 @@
 Git is a "Distributed version control system", which means that every user has their own, complete, copy of the repository stored on their computer. A repository is like a database with a record of every change _ever_ made.
 
 Git was originally created by Linus Torvalds, the same guy that created Linux, which is (probably) why it is free and opensource. 
-- 
+
 Git is fast because most of the work is done locally rather than on a server. Best of all, it can be worked on offline! 
 
 Because files are versioned, you can't overwrite any file.
