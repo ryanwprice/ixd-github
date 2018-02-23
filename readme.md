@@ -8,7 +8,7 @@ Git was originally created by Linus Torvalds, the same guy that created Linux, w
 
 Git is fast because most of the work is done locally rather than on a server. Best of all, it can be worked on offline! 
 
-Because files are versioned, you can't overwrite any file.
+Because files are versioned, you can't overwrite any file. Each version of the repository is given a unique ID (checksum).
 
 Git is great for groups and teams because people can work on the same files simultaneously without conflict (due to the local repo).
 
@@ -80,12 +80,6 @@ If you do encounter a conflict, try [GitHub Help](https://help.github.com/articl
 
 **Protip:** Always `git pull` before editing group code. That way you'll be sure to have the latest and greatest version of the group project. This will also drastically reduce the odds of merge conflicts!
 
-## Forking & Pulling
-
-"Fork" is GitHub lingo for getting a copy of an existing repo. This is a way for people to share access with strangers who may want to contribute to a large project (like Linux, for example). "Pulling" allows the original author to control who's code updates will be brought into the fold and added to the project. 
-
-Forking is way more complicated than anything we need for group projects, but worth noting as something to explore down the road.
-
 ## Branching
 
 Branching is a way to work on a project without affecting the regular [flow](https://guides.github.com/introduction/flow/) of the project—you are _branching_ off from the main project and your commits do not affect the master version of the repository.
@@ -128,6 +122,12 @@ The reset command is destructive and removes any commits between your current co
 `git reset --hard HEAD` will force a reset to the last commit
 `git reset --hard HEAD~3` will force the repo back 3 commits
 `git reset --hard 39cdcd0339c122c0307930de9e5cc08217726cee` will let us to revert to a specific repo (We can find the log checksum with `git log`)
+
+## Forking & Pulling
+
+"Fork" is GitHub lingo for getting a copy of an existing repo. This is a way for people to share access with strangers who may want to contribute to a large project (like Linux, for example). "Pulling" allows the original author to control who's code updates will be brought into the fold and added to the project. 
+
+Forking is way more complicated than anything we need for group projects, but worth noting as something to explore down the road.
 
 ## GitHub Pages & Markdown
 
